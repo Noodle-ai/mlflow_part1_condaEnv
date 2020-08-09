@@ -1,24 +1,39 @@
-Introduction to MLflow
-======================
+Introduction to MLflow for MLOps Part 1: Anaconda Environment
+=============================================================
+
+Medium Blog: https://medium.com/p/1fd9e299226f
+
+After following along with the demos in this three part repository you will be able to:
+
+* Understand how you and your Data Science teams can improve your MLOps practices using MLflow
+* Use all Components of MLflow (Tracking, Projects, Models, Registry)
+* Use MLflow in an Anaconda Environment
+* Use MLflow with a Docker Environment (including running an IDE inside of a container)
+* Use Postgre Backend Store and Minio Artifact Store for Easy Collaboration
 
 The instructions/demos below assume you are using a Mac OSX operating system. Other operating systems can be used with minor modifications. 
 
-After following along with the demos below you will be able to:
+|
 
-* Use all Components of MLflow
+Table of Contents:
+==================
+Part 1: Anaconda Environment (https://github.com/Noodle-ai/mlflow_part1_condaEnv)
+---------------------------------------------------------------------------------
 
-  * Tracking
-  * Projects
-  * Models
-  * Registry
-* Use MLflow in an Anaconda Environment
-* Use MLflow with a Docker Environment
+1. What is MLflow and Why Should You Use It?
+2. Using MLflow with a Conda Environment 
 
-  * Develop Code Within a Container
-* Use Non-Local Storage for Easy Collaboration
+Part 2: Docker Environment (https://github.com/Noodle-ai/mlflow_part2_dockerEnv)
+--------------------------------------------------------------------------------
 
-  * Use a PostgreSQL DB as Tracking URI
-  * Use Minio as an Artifact URI
+1. Using MLflow with a Docker Environment
+
+Part 3: Database Tracking, Minio Artifact Storage, and Registry (https://github.com/Noodle-ai/mlflow_part3_PostgresMinioRegistry)
+---------------------------------------------------------------------------------------------------------------------------------
+
+1. Running MLflow with a PostgreSQL Database and Minio Artifact Store
+2. MLflow Model Registry
+
 
 |
 
@@ -75,7 +90,7 @@ This is an API and UI for logging parameters, code versions, metrics, and artifa
 
 MLflow Projects
 ^^^^^^^^^^^^^^^
-MLflow Projects are a standard format for packaging reusable data science code. Each project is simply a directory with code, and uses a descriptor file to specify its dependencies and how to run the code. For example, a project can contain a conda.yaml for specifying a Python Conda Environment.
+MLflow Projects are a standard format for packaging reusable data science code. Each project is simply a directory with code, and uses a descriptor file to specify its dependencies and how to run the code. For example, a project can contain a conda.yaml for specifying a Python Anaconda Environment.
 
 |
 
@@ -87,7 +102,7 @@ MLflow Models offer a convention for packaging machine learning models in multip
 
 MLflow Registry
 ^^^^^^^^^^^^^^^    
-MLflow Registry offers a centralized model store, set of APIs, and UI, to collaboratively manage the full lifecycle of an MLflow Model. It provides model lineage (which MLflow experiment and run produced the model), model versioning, stage transitions (for example from staging to production or archiving), and annotations. 
+MLflow Registry offers a centralized model store, set of APIs, and UI, to collaboratively manage the full lifecycle of an MLflow model. It provides model lineage (which MLflow experiment and run produced the model), model versioning, stage transitions (for example from staging to production or archiving), and annotations. 
 
 |
 
