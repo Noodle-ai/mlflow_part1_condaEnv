@@ -1,8 +1,6 @@
 Introduction to MLflow for MLOps Part 1: Anaconda Environment
 =============================================================
 
-Medium Blog: https://medium.com/p/1fd9e299226f
-
 After following along with the demos in this three part repository you will be able to:
 
 * Understand how you and your Data Science teams can improve your MLOps practices using MLflow
@@ -17,19 +15,25 @@ The instructions/demos below assume you are using a Mac OSX operating system. Ot
 
 Table of Contents:
 ==================
-Part 1: Anaconda Environment (https://github.com/Noodle-ai/mlflow_part1_condaEnv)
----------------------------------------------------------------------------------
+Part 1: Anaconda Environment
+----------------------------
+(Github: https://github.com/Noodle-ai/mlflow_part1_condaEnv)
+(Medium: https://medium.com/p/1fd9e299226f)
 
 1. What is MLflow and Why Should You Use It?
 2. Using MLflow with a Conda Environment 
 
-Part 2: Docker Environment (https://github.com/Noodle-ai/mlflow_part2_dockerEnv)
---------------------------------------------------------------------------------
+Part 2: Docker Environment
+--------------------------
+(Github: https://github.com/Noodle-ai/mlflow_part2_dockerEnv)
+(Medium: https://medium.com/p/53516ce45266)
 
 1. Using MLflow with a Docker Environment
 
-Part 3: Database Tracking, Minio Artifact Storage, and Registry (https://github.com/Noodle-ai/mlflow_part3_PostgresMinioRegistry)
----------------------------------------------------------------------------------------------------------------------------------
+Part 3: Database Tracking, Minio Artifact Storage, and Registry
+---------------------------------------------------------------
+(Github: https://github.com/Noodle-ai/mlflow_part1_condaEnv)
+(Medium: https://medium.com/p/9fef196aaf42)
 
 1. Running MLflow with a PostgreSQL Database and Minio Artifact Store
 2. MLflow Model Registry
