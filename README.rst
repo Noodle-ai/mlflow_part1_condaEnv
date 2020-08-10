@@ -188,13 +188,12 @@ Setting up for the Tutorial
 
 .. code-block:: bash
 
-  git clone https://<username>@bitbucket.org/noodleai/mlflow_demos.git
+  git clone https://github.com/Noodle-ai/mlflow_part1_condaEnv.git
 
 5. Create a conda environment from the conda.yaml file and activate
 
 .. code-block:: bash
 
-  cd conda_env
   conda env create --file conda.yaml
   conda activate mlflow_demos
 
@@ -215,7 +214,7 @@ If, instead of using the conda.yaml to set up your environment, you wanted to cr
 
 Examples
 --------
-Open experiment.ipynb in the conda_env folder and follow along. The notebook contains examples demonstrating how to use MLflow Tracking and MLflow Models. It also contains descriptions of how to use MLflow Projects.
+Open experiment.ipynb and follow along. The notebook contains examples demonstrating how to use MLflow Tracking and MLflow Models. It also contains descriptions of how to use MLflow Projects.
 
 | 
 
@@ -259,10 +258,6 @@ Activate the MLflow Tracking UI by typing the following into the terminal. You m
   mlflow ui
 
 View the tracking UI by visiting the URL returned by the previous command.
-
-.. code-block:: bash
-
-  http://localhost:5000
 
 .. image:: screenshots/mlflow_ui.png
   :width: 600
@@ -316,6 +311,7 @@ There is also a notebook function of the training script. You can use the notebo
 .. code-block:: python
 
   # Wine Quality Sample
+
   def train(in_alpha, in_l1_ratio):
       import pandas as pd
       import numpy as np
@@ -381,7 +377,6 @@ There is also a notebook function of the training script. You can use the notebo
           mlflow.log_metric("rmse", rmse)
           mlflow.log_metric("r2", r2)
           mlflow.log_metric("mae", mae)
-
           mlflow.sklearn.log_model(lr, "model")
 
 |
@@ -434,15 +429,15 @@ To run this project use "mlflow run" on the folder containing the MLproject file
 
 .. code-block:: bash
 
-  mlflow run ../conda_env -P alpha=1.0 -P l1_ratio=1.0
+  mlflow run . -P alpha=1.0 -P l1_ratio=1.0
 
 After running this command, MLflow runs your training code in a new Conda environment with the dependencies specified in conda.yaml.
 
-If a repository has an MLproject file you can also run a project directly from GitHub. This tutorial lives in the https://bitbucket.org/noodleai/mlflow_demos repository which you can run with the following command. The symbol "#" is used to move into a subdirectory of the repo. The "--version" argument can be used to run code from a different branch. You will need to type your username into the below command.
+If a repository has an MLproject file you can also run a project directly from GitHub. This tutorial lives in the https://github.com/Noodle-ai/mlflow_part1_condaEnv repository which you can run with the following command. The symbol "#" can be used to move into a subdirectory of the repo. The "--version" argument can be used to run code from a different branch.
 
 .. code-block:: bash
 
-  mlflow run https://<username>@bitbucket.org/noodleai/mlflow_demos.git#conda_env -P alpha=1.0 -P l1_ratio=0.8
+  mlflow run https://github.com/Noodle-ai/mlflow_part1_condaEnv -P alpha=1.0 -P l1_ratio=0.8
 
 |
 
@@ -464,7 +459,7 @@ To view this artifact, you can use the UI again. When you click a date in the li
 .. image:: screenshots/model_artifacts.png
   :width: 600
 
-At the bottom, you can see that the call to mlflow.sklearn.log_model produced three files in ./mlruns/0/<run_id>/artifacts/model. The first file, MLmodel, is a metadata file that tells MLflow how to load the model. The second file is a conda.yaml that contains the model dependencies from the conda environment. The third file, model.pkl, is a serialized version of the linear regression model that you trained. 
+At the bottom, you can see that the call to mlflow.sklearn.log_model produced three files in ./mlruns/0/<run_id>/artifacts/model. The first file, MLmodel, is a metadata file that tells MLflow how to load the model. The second file is a conda.yaml that contains the model dependencies from the Conda environment. The third file, model.pkl, is a serialized version of the linear regression model that you trained. 
 
 In this example, you can use this MLmodel format with MLflow to deploy a local REST server that can serve predictions. 
 
@@ -475,8 +470,7 @@ To deploy the server, run the following command.
   mlflow models serve -m ./mlruns/0/<run_id>/artifacts/model -p 1234
 
 Note:
-The version of Python used to create the model must be the same as the one running "mlflow models serve". If this is not the case, you may see the error 
-* UnicodeDecodeError: 'ascii' codec can't decode byte 0x9f in position 1: ordinal not in range(128) or raise ValueError, "unsupported pickle protocol: %d".
+The version of Python used to create the model must be the same as the one running "mlflow models serve". If this is not the case, you may see the error UnicodeDecodeError: 'ascii' codec can't decode byte 0x9f in position 1: ordinal not in range(128) or raise ValueError, "unsupported pickle protocol: %d".
 
 Once you have deployed the server, you can pass it some sample data and see the predictions. The following example uses curl to send a JSON-serialized pandas DataFrame with the split orientation to the model server. For more information about the input data formats accepted by the model server, see the MLflow deployment tools documentation.
 
