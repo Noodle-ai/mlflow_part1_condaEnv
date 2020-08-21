@@ -23,22 +23,6 @@ Part 1: Anaconda Environment
 1. What is MLflow and Why Should You Use It?
 2. Using MLflow with a Conda Environment 
 
-Part 2: Docker Environment
---------------------------
-(Github: https://github.com/Noodle-ai/mlflow_part2_dockerEnv)
-(Medium: https://medium.com/p/53516ce45266)
-
-1. Using MLflow with a Docker Environment
-
-Part 3: Database Tracking, Minio Artifact Storage, and Registry
----------------------------------------------------------------
-(Github: https://github.com/Noodle-ai/mlflow_part1_condaEnv)
-(Medium: https://medium.com/p/9fef196aaf42)
-
-1. Running MLflow with a PostgreSQL Database and Minio Artifact Store
-2. MLflow Model Registry
-
-
 |
 
 1. What is MLflow and why should you use it?
@@ -46,9 +30,9 @@ Part 3: Database Tracking, Minio Artifact Storage, and Registry
 
 |
 
-Concepts
---------
-MLflow is organized into four components (Tracking, Projects, Models, and Registry). You can use each of these components on their own but they are also designed to work well together. MLflow is designed to work with any machine learning library, determine most things about your code by convention, and require minimal changes to integrate into an existing codebase. It aims to take any codebase written in its format and make it reproducible and reusable by multiple data scientists. MLflow lets you train, reuse, and deploy models with any library and package them into reproducible steps that other data scientists can use as a “black box”, without even having to know which library you are using. 
+Basic Concepts
+--------------
+MLflow is an MLOps tool that can be used to increase the efficiency of machine learning experimentation and productionalization. MLflow is organized into four components (Tracking, Projects, Models, and Registry). You can use each of these components on their own but they are also designed to work well together. MLflow is designed to work with any machine learning library, determine most things about your code by convention, and require minimal changes to integrate into an existing codebase. It aims to take any codebase written in its format and make it reproducible and reusable by multiple data scientists. MLflow lets you train, reuse, and deploy models with any library and package them into reproducible steps that other data scientists can use as a “black box”, without even having to know which library you are using. 
 
 |
 
