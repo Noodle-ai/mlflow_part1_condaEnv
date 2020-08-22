@@ -257,7 +257,7 @@ Click on the run to see more details.
 
 |
 
-Click on the parameter to see more details.
+Click on the metric to see more details.
 
 |
 
@@ -400,7 +400,7 @@ After a model has been saved using MLflow Models within MLflow Tracking you can 
 
 Packaging the Training Code in a Conda Environment with MLflow Projects
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Now that you have your training code, you can package it so that other data scientists can easily reuse the model, or so that you can run the training remotely. 
+Now that you have your training code, you can package it so that other data scientists can easily reuse the training script, or so that you can run the training remotely. 
 
 You do this by using MLflow Projects to specify the dependencies and entry points to your code. The MLproject file specifies that the project has the dependencies located in a Conda environment (defined by conda.yaml) and has one entry point (train.py) that takes two parameters: alpha and l1_ratio. 
 
