@@ -23,6 +23,13 @@ Part 1: Anaconda Environment
 1. What is MLflow and Why Should You Use It?
 2. Using MLflow with a Conda Environment 
 
+Part 2: Docker Environment
+--------------------------
+(Github: https://github.com/Noodle-ai/mlflow_part2_dockerEnv)
+(Medium: https://medium.com/p/53516ce45266)
+
+1. Using MLflow with a Docker Environment
+
 |
 
 1. What is MLflow and why should you use it?
